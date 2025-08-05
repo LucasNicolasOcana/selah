@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Selah - El descanso que tu cuerpo se merece",
+  title: "Selah - El descanso que tu cuerpo necesita",
   description: "Masajes profesionales en Rosario, Santa Fe. Cecilia, masajista certificada con 3 años de experiencia. Masajes relajantes, descontracturantes, reductores, drenaje linfático y más. Reserva tu turno por WhatsApp.",
   icons: {
     icon: '/icon.png',

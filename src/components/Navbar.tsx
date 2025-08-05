@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,38 +25,31 @@ export default function Navbar() {
             </div>
             <div>
               <span className="text-2xl font-bold text-gray-800 tracking-tight">Selah</span>
-              <span className="text-xs text-gray-500 block -mt-0.5 font-light italic">El descanso que tu cuerpo se merece</span>
+              <span className="text-xs text-gray-500 block -mt-0.5 font-light italic">El descanso que tu cuerpo necesita</span>
             </div>
           </div>
           
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
-            <a 
-              href="#inicio" 
+            <Link 
+              href="/" 
               className="relative text-gray-700 hover:text-primary transition-all duration-300 font-medium group"
             >
               Inicio
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-            </a>
+            </Link>
             <a 
-              href="#servicios" 
+              href="/servicios" 
               className="relative text-gray-700 hover:text-primary transition-all duration-300 font-medium group"
             >
               Servicios
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
             </a>
             <a 
-              href="#faq" 
+              href="/sobre-mi" 
               className="relative text-gray-700 hover:text-primary transition-all duration-300 font-medium group"
             >
-              FAQ
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
-            </a>
-            <a 
-              href="#contacto" 
-              className="relative text-gray-700 hover:text-primary transition-all duration-300 font-medium group"
-            >
-              Contacto
+              Sobre Mí
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
             </a>
           </div>
@@ -90,19 +84,26 @@ export default function Navbar() {
         } overflow-hidden`}>
           <div className="py-4 border-t border-gray-100">
             <div className="flex flex-col space-y-4">
-              <a 
-                href="#inicio" 
+              <Link 
+                href="/" 
                 className="text-gray-700 hover:text-primary transition-colors duration-200 font-medium py-2 px-4 rounded-lg hover:bg-gray-50"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Inicio
-              </a>
+              </Link>
               <a 
-                href="#servicios" 
+                href="/servicios" 
                 className="text-gray-700 hover:text-primary transition-colors duration-200 font-medium py-2 px-4 rounded-lg hover:bg-gray-50"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Servicios
+              </a>
+              <a 
+                href="/sobre-mi" 
+                className="text-gray-700 hover:text-primary transition-colors duration-200 font-medium py-2 px-4 rounded-lg hover:bg-gray-50"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Sobre Mí
               </a>
               <a 
                 href="#faq" 

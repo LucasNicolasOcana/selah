@@ -18,7 +18,7 @@ export default function Footer() {
               <p className="text-primary-300 text-lg">Rosario, Santa Fe</p>
             </div>
             <p className="text-gray-300 mb-8 leading-relaxed text-lg">
-              El descanso que tu cuerpo se merece. Soy Cecilia, masajista profesional certificada, 
+              El descanso que tu cuerpo necesita. Soy Cecilia, masajista profesional certificada, 
               especializada en tratamientos personalizados para tu bienestar y relajación.
             </p>
             <div className="flex space-x-6">
@@ -111,8 +111,8 @@ export default function Footer() {
                 &copy; 2024 Selah. Todos los derechos reservados.
               </p>
               <div className="flex space-x-6 text-base">
-                <a href="#" className="text-gray-400 hover:text-primary-300 transition-colors duration-200">Política de Privacidad</a>
-                <a href="#" className="text-gray-400 hover:text-primary-300 transition-colors duration-200">Términos</a>
+                <a href="/privacidad" className="text-gray-400 hover:text-primary-300 transition-colors duration-200">Política de Privacidad</a>
+                <a href="/terminos" className="text-gray-400 hover:text-primary-300 transition-colors duration-200">Términos</a>
               </div>
             </div>
           </div>
