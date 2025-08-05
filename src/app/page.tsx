@@ -163,7 +163,6 @@ export default function Home() {
                 <p className="text-gray-600 mb-6">{service.description}</p>
                 <div className="flex justify-between items-center mb-6">
                   <span className="text-sm text-gray-500">{service.duration}</span>
-                  <span className="text-2xl font-bold text-spa-600">{service.price}</span>
                 </div>
                 <a 
                   href="https://wa.me/5493416086817?text=Hola%20Cecilia,%20me%20interesa%20agendar%20un%20turno%20para%20{service.name}.%20¿Podrías%20contarme%20más%20detalles?"

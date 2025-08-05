@@ -2,7 +2,6 @@
 
 import { MapPin, Clock, Heart } from 'lucide-react';
 import { FaWhatsapp, FaInstagram, FaFacebook } from 'react-icons/fa';
-import Image from 'next/image';
 
 export default function Footer() {
   return (
