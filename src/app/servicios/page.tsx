@@ -6,10 +6,8 @@ import {
   Flower2, 
   Heart, 
   Sparkles, 
-  Clock, 
   Star, 
   CheckCircle, 
-  ArrowRight,
   MapPin,
   Phone
 } from 'lucide-react';

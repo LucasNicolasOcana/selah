@@ -1,31 +1,27 @@
 'use client';
 
-import { Mail, MapPin, Flower2, Sparkles, Heart } from 'lucide-react';
-import { FaWhatsapp, FaSpa, FaQuestionCircle, FaEnvelope } from 'react-icons/fa';
+import { Mail, MapPin } from 'lucide-react';
+import { FaWhatsapp, FaQuestionCircle, FaEnvelope } from 'react-icons/fa';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Image from 'next/image';
 
 export default function Home() {
 
-  // Elimino las variables de servicios que ya no se usan
-
-
   return (
     <div className="min-h-screen bg-gradient-to-br from-spa-50 to-earth-50">
       <Navbar />
 
       {/* Hero Section */}
-      <section id="inicio" className="pt-20 pb-1 bg-gradient-to-br from-primary-50 to-primary-100">
+      <section id="inicio" className="bg-gradient-to-br from-primary to-primary-light text-white py-20">
         <div className="container-custom">
-          <div className="max-w-4xl mx-auto text-center">
-            <div className="flex justify-center mb-6">
-              <Image src="/LOGO.png" alt="Selah Logo" width={200} height={200} className="object-contain drop-shadow mt-10" />
+          <div className="max-w-4xl mx-auto text-center relative">
+            <div className="flex justify-center mb-6 relative z-10 mt-10">
             </div>
-            <h1 className="text-4xl md:text-6xl font-bold text-gray-800 mb-8 leading-tight">
-              EL DESCANSO QUE TU <span className="text-primary-600">CUERPO</span> NECESITA
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-8 leading-tight">
+              EL DESCANSO QUE TU <span className="text-primary-100">CUERPO</span> NECESITA
             </h1>
-            <p className="text-xl text-gray-600 mb-10 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-xl text-white/90 mb-10 leading-relaxed max-w-3xl mx-auto">
               Soy Cecilia, masajista profesional certificada. Te ofrezco tratamientos personalizados de masajes en un ambiente cálido y relajante, diseñado especialmente para tu bienestar y descanso.
             </p>
             <div className="flex flex-col sm:flex-row gap-2 justify-center">
