@@ -165,7 +165,7 @@ export default function Home() {
                   <span className="text-sm text-gray-500">{service.duration}</span>
                 </div>
                 <a 
-                  href="https://wa.me/5493416086817?text=Hola%20Cecilia,%20me%20interesa%20agendar%20un%20turno%20para%20{service.name}.%20¿Podrías%20contarme%20más%20detalles?"
+                  href={`https://wa.me/5493416086817?text=Hola%20Cecilia,%20me%20interesa%20agendar%20un%20turno%20para%20${service.name}.%20¿Podrías%20contarme%20más%20detalles?`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-primary w-full inline-block text-center"
