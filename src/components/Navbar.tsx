@@ -20,12 +20,12 @@ export default function Navbar() {
                 alt="Selah Logo" 
                 width={56}
                 height={56}
-                className="object-contain drop-shadow-sm"
+                className="object-contain drop-shadow-sm -mt-3"
               />
             </div>
             <div>
-              <span className="text-2xl font-bold text-gray-800 tracking-tight">Selah</span>
-              <span className="text-xs text-gray-500 block -mt-0.5 font-light italic">El descanso que tu cuerpo necesita</span>
+              <span className="text-4xl font-bold text-gray-800 tracking-tight great-vibes-regular">Selah</span>
+              {/* <span className="text-xs text-gray-500 block -mt-0.5 font-light">El descanso que tu cuerpo necesita</span> */}
             </div>
           </div>
           
@@ -104,20 +104,6 @@ export default function Navbar() {
                 onClick={() => setIsMenuOpen(false)}
               >
                 Sobre Mí
-              </a>
-              <a 
-                href="#faq" 
-                className="text-gray-700 hover:text-primary transition-colors duration-200 font-medium py-2 px-4 rounded-lg hover:bg-gray-50"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                FAQ
-              </a>
-              <a 
-                href="#contacto" 
-                className="text-gray-700 hover:text-primary transition-colors duration-200 font-medium py-2 px-4 rounded-lg hover:bg-gray-50"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Contacto
               </a>
               <a 
                 href="https://wa.me/5493416086817?text=Hola%20Cecilia,%20me%20interesa%20agendar%20un%20turno%20para%20masajes.%20¿Podrías%20contarme%20sobre%20tus%20servicios?"

@@ -1,119 +1,128 @@
-'use client';
+"use client";
 
-import Navbar from '@/components/Navbar';
-import Footer from '@/components/Footer';
-import { 
-  Flower2, 
-  Heart, 
-  Sparkles, 
-  Star, 
-  CheckCircle, 
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import {
+  Flower2,
+  Heart,
+  Sparkles,
+  Star,
+  CheckCircle,
   MapPin,
-  Phone
-} from 'lucide-react';
-import { FaWhatsapp, FaSpa, FaUserMd } from 'react-icons/fa';
+  Phone,
+  Award
+} from "lucide-react";
+import { FaWhatsapp, FaSpa, FaUserMd } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 export default function Servicios() {
   const servicios = [
     {
       name: "Masaje Relajante",
-      description: "Técnica suave que alivia el estrés y la tensión muscular, ideal para desconectar completamente",
+      description:
+        "Técnica suave que alivia el estrés y la tensión muscular, ideal para desconectar completamente",
       duration: "60 min",
       price: "$15.000",
       benefits: [
         "Reduce el estrés y la ansiedad",
         "Mejora la calidad del sueño",
         "Alivia la tensión muscular",
-        "Promueve la relajación profunda"
+        "Promueve la relajación profunda",
       ],
       icon: <Flower2 className="w-8 h-8" />,
       color: "from-blue-50 to-blue-100",
       iconColor: "text-blue-600",
-      bgColor: "bg-blue-100"
+      bgColor: "bg-blue-100",
     },
     {
       name: "Masaje Descontracturante",
-      description: "Tratamiento profundo para aliviar contracturas y dolores musculares específicos",
+      description:
+        "Tratamiento profundo para aliviar contracturas y dolores musculares específicos",
       duration: "60-90 min",
       price: "$18.000",
       benefits: [
         "Elimina contracturas musculares",
         "Alivia dolores de espalda y cuello",
         "Mejora la movilidad articular",
-        "Reduce la tensión acumulada"
+        "Reduce la tensión acumulada",
       ],
       icon: <Heart className="w-8 h-8" />,
       color: "from-green-50 to-green-100",
       iconColor: "text-green-600",
-      bgColor: "bg-green-100"
+      bgColor: "bg-green-100",
     },
     {
       name: "Masaje Reductor",
-      description: "Técnica especializada para mejorar la circulación y reducir medidas localizadas",
+      description:
+        "Técnica especializada para mejorar la circulación y reducir medidas localizadas",
       duration: "60 min",
       price: "$16.000",
       benefits: [
         "Mejora la circulación sanguínea",
         "Reduce la celulitis",
         "Tonifica los músculos",
-        "Elimina toxinas del cuerpo"
+        "Elimina toxinas del cuerpo",
       ],
       icon: <Sparkles className="w-8 h-8" />,
       color: "from-purple-50 to-purple-100",
       iconColor: "text-purple-600",
-      bgColor: "bg-purple-100"
+      bgColor: "bg-purple-100",
     },
     {
       name: "Drenaje Linfático Manual",
-      description: "Técnica terapéutica que estimula el sistema linfático y reduce la retención de líquidos",
+      description:
+        "Técnica terapéutica que estimula el sistema linfático y reduce la retención de líquidos",
       duration: "60 min",
       price: "$17.000",
       benefits: [
         "Reduce la retención de líquidos",
         "Elimina toxinas del organismo",
         "Mejora el sistema inmunológico",
-        "Alivia la hinchazón"
+        "Alivia la hinchazón",
       ],
       icon: <Flower2 className="w-8 h-8" />,
       color: "from-teal-50 to-teal-100",
       iconColor: "text-teal-600",
-      bgColor: "bg-teal-100"
+      bgColor: "bg-teal-100",
     },
     {
       name: "Masaje Facial",
-      description: "Tratamiento relajante y rejuvenecedor para el rostro y cuello",
+      description:
+        "Tratamiento relajante y rejuvenecedor para el rostro y cuello",
       duration: "45 min",
       price: "$12.000",
       benefits: [
         "Rejuvenece la piel del rostro",
         "Reduce las líneas de expresión",
         "Mejora la circulación facial",
-        "Relaja la tensión del cuello"
+        "Relaja la tensión del cuello",
       ],
       icon: <Heart className="w-8 h-8" />,
       color: "from-pink-50 to-pink-100",
       iconColor: "text-pink-600",
-      bgColor: "bg-pink-100"
+      bgColor: "bg-pink-100",
     },
     {
       name: "Masaje Maternal",
-      description: "Masaje especializado para futuras mamás, alivia molestias del embarazo",
+      description:
+        "Masaje especializado para futuras mamás, alivia molestias del embarazo",
       duration: "60 min",
       price: "$16.000",
       benefits: [
         "Alivia dolores de espalda",
         "Reduce la hinchazón en piernas",
         "Mejora la circulación",
-        "Promueve la relajación"
+        "Promueve la relajación",
       ],
       icon: <Sparkles className="w-8 h-8" />,
       color: "from-orange-50 to-orange-100",
       iconColor: "text-orange-600",
-      bgColor: "bg-orange-100"
+      bgColor: "bg-orange-100",
     },
     {
       name: "Maderoterapia",
-      description: "Técnica de masaje con instrumentos de madera especialmente diseñados para moldear, tonificar y relajar el cuerpo. Ideal para reducir celulitis, mejorar la circulación y promover el bienestar integral.",
+      description:
+        "Técnica de masaje con instrumentos de madera especialmente diseñados para moldear, tonificar y relajar el cuerpo. Ideal para reducir celulitis, mejorar la circulación y promover el bienestar integral.",
       duration: "60 min",
       price: "Próximamente",
       benefits: [
@@ -122,16 +131,17 @@ export default function Servicios() {
         "Tonifica y moldea la silueta",
         "Alivia el estrés y la tensión muscular",
         "Promueve la eliminación de toxinas",
-        "Relaja cuerpo y mente"
+        "Relaja cuerpo y mente",
       ],
       icon: <Sparkles className="w-8 h-8" />, // Puedes cambiar el ícono si tienes uno más representativo
       color: "from-yellow-50 to-yellow-100",
       iconColor: "text-yellow-600",
-      bgColor: "bg-yellow-100"
+      bgColor: "bg-yellow-100",
     },
     {
       name: "Masaje con Piedras Calientes",
-      description: "Masaje terapéutico que utiliza piedras volcánicas calientes para relajar profundamente los músculos, aliviar dolores y mejorar la circulación. Ideal para quienes buscan una experiencia de relajación intensa y restauradora.",
+      description:
+        "Masaje terapéutico que utiliza piedras volcánicas calientes para relajar profundamente los músculos, aliviar dolores y mejorar la circulación. Ideal para quienes buscan una experiencia de relajación intensa y restauradora.",
       duration: "60 min",
       price: "Próximamente",
       benefits: [
@@ -140,13 +150,13 @@ export default function Servicios() {
         "Mejora la calidad del sueño",
         "Favorece la circulación sanguínea",
         "Promueve la desintoxicación del organismo",
-        "Aumenta la flexibilidad y movilidad"
+        "Aumenta la flexibilidad y movilidad",
       ],
       icon: <Flower2 className="w-8 h-8" />, // Puedes cambiar el ícono si tienes uno más representativo
       color: "from-gray-50 to-gray-100",
       iconColor: "text-gray-600",
-      bgColor: "bg-gray-100"
-    }
+      bgColor: "bg-gray-100",
+    },
   ];
 
   const paquetes = [
@@ -155,120 +165,240 @@ export default function Servicios() {
       description: "3 sesiones de masaje relajante",
       price: "$40.000",
       savings: "Ahorras $5.000",
-      popular: false
+      popular: false,
     },
     {
       name: "Paquete Premium",
       description: "5 sesiones combinadas (relajante + descontracturante)",
       price: "$75.000",
       savings: "Ahorras $15.000",
-      popular: true
+      popular: true,
     },
     {
       name: "Paquete Especial",
       description: "10 sesiones de cualquier masaje",
       price: "$140.000",
       savings: "Ahorras $30.000",
-      popular: false
-    }
+      popular: false,
+    },
   ];
+
+  // Variantes de animación
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        duration: 0.6,
+        staggerChildren: 0.2,
+      },
+    },
+  };
+
+  const itemVariants = {
+    hidden: { opacity: 0, y: 30 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut" as const,
+      },
+    },
+  };
+
+  const fadeInUp = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: "easeOut" as const,
+      },
+    },
+  };
+
+  const scaleIn = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: {
+      opacity: 1,
+      scale: 1,
+      transition: {
+        duration: 0.6,
+        ease: "easeOut" as const,
+      },
+    },
+  };
+
+  const cardHover = {
+    hover: {
+      scale: 1.05,
+      y: -10,
+      transition: {
+        duration: 0.3,
+        ease: "easeOut" as const,
+      },
+    },
+  };
 
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-br from-gray-50 to-gray-100">
       <Navbar />
       <main className="flex-grow">
-        
         {/* Hero Section */}
         <section className="bg-gradient-to-br from-primary to-primary-light text-white py-20">
           <div className="container mx-auto px-4 text-center mt-10">
-            <div className="inline-flex items-center justify-center w-20 h-20 bg-white/20 rounded-full mb-8">
+            <motion.div
+              className="inline-flex items-center justify-center w-20 h-20 bg-white/20 rounded-full mb-8"
+              variants={scaleIn}
+              initial="hidden"
+              animate="visible"
+            >
               <FaSpa className="w-10 h-10" />
-            </div>
-            <h1 className="text-5xl font-bold mb-6">Nuestros Servicios</h1>
-            <p className="text-xl mb-8 max-w-3xl mx-auto">
-              Descubre nuestra amplia gama de masajes terapéuticos diseñados para restaurar tu bienestar físico y mental
-            </p>
-            <div className="flex items-center justify-center space-x-8 text-lg">
-              <div className="flex items-center space-x-2">
+            </motion.div>
+            <motion.h1
+              className="text-5xl font-bold mb-6"
+              variants={fadeInUp}
+              initial="hidden"
+              animate="visible"
+            >
+              Nuestros Servicios
+            </motion.h1>
+            <motion.p
+              className="text-xl mb-8 max-w-3xl mx-auto"
+              variants={fadeInUp}
+              initial="hidden"
+              animate="visible"
+            >
+              Descubre nuestra amplia gama de masajes terapéuticos diseñados
+              para restaurar tu bienestar físico y mental
+            </motion.p>
+            <motion.div
+              className="flex items-center justify-center space-x-8 text-lg"
+              variants={containerVariants}
+              initial="hidden"
+              animate="visible"
+            >
+              <motion.div
+                className="flex items-center space-x-2"
+                variants={itemVariants}
+              >
                 <FaUserMd className="w-5 h-5" />
                 <span>Profesional Certificada</span>
-              </div>
-              <div className="flex items-center space-x-2">
+              </motion.div>
+              <motion.div
+                className="flex items-center space-x-2"
+                variants={itemVariants}
+              >
                 <Star className="w-5 h-5" />
                 <span>Experiencia Garantizada</span>
-              </div>
-            </div>
+              </motion.div>
+            </motion.div>
           </div>
         </section>
 
         {/* Servicios Individuales */}
         <section className="py-20">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-800 mb-4">Servicios Disponibles</h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <motion.div className="text-center mb-16" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }}>
+              <motion.h2 className="text-4xl font-bold text-gray-800 mb-4 flex items-center justify-center gap-3" variants={fadeInUp}>
+                <Star className="w-8 h-8 text-primary" />
+                Servicios Disponibles
+              </motion.h2>
+              <motion.p className="text-xl text-gray-600 max-w-2xl mx-auto" variants={fadeInUp}>
                 Cada masaje está diseñado para satisfacer necesidades específicas y promover tu bienestar integral
-              </p>
-            </div>
-            
+              </motion.p>
+            </motion.div>
+
             <div className="grid lg:grid-cols-2 gap-8">
               {servicios.map((servicio, index) => (
-                <div key={index} className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300">
+                <div
+                  key={index}
+                  className="bg-white rounded-2xl shadow-xl overflow-hidden hover:shadow-2xl transition-all duration-300"
+                >
                   <div className={`p-8 ${servicio.color} bg-gradient-to-br`}>
                     <div className="flex items-start justify-between mb-6">
                       <div className={`w-16 h-16 ${servicio.bgColor} rounded-xl flex items-center justify-center ${servicio.iconColor}`}>
                         {servicio.icon}
                       </div>
                       <div className="text-right">
-                        <div className="text-3xl font-bold text-gray-800">{servicio.price}</div>
-                        <div className="text-sm text-gray-600">{servicio.duration}</div>
+                        <div className="text-3xl font-bold text-gray-800">
+                          {servicio.price}
+                        </div>
+                        <div className="text-sm text-gray-600">
+                          {servicio.duration}
+                        </div>
                       </div>
                     </div>
-                    
-                    <h3 className="text-2xl font-bold text-gray-800 mb-4">{servicio.name}</h3>
-                    <p className="text-gray-600 mb-6 leading-relaxed">{servicio.description}</p>
-                    
+
+                    <h3 className="text-2xl font-bold text-gray-800 mb-4">
+                      {servicio.name}
+                    </h3>
+                    <p className="text-gray-600 mb-6 leading-relaxed">
+                      {servicio.description}
+                    </p>
+
                     <div className="mb-6">
-                      <h4 className="font-semibold text-gray-800 mb-3">Beneficios:</h4>
+                      <h4 className="font-semibold text-gray-800 mb-3">
+                        Beneficios:
+                      </h4>
                       <ul className="space-y-2">
                         {servicio.benefits.map((benefit, idx) => (
-                          <li key={idx} className="flex items-center space-x-2 text-gray-600">
+                          <li
+                            key={idx}
+                            className="flex items-center space-x-2 text-gray-600"
+                          >
                             <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
                             <span>{benefit}</span>
                           </li>
                         ))}
                       </ul>
                     </div>
-                    
-                    <a 
+
+                    <a
                       href={
-                        servicio.name === "Maderoterapia" || servicio.name === "Masaje con Piedras Calientes"
+                        servicio.name === "Maderoterapia" ||
+                        servicio.name === "Masaje con Piedras Calientes"
                           ? undefined
-                          : `https://wa.me/5493416086817?text=Hola%20Cecilia,%20me%20interesa%20agendar%20un%20turno%20para%20${encodeURIComponent(servicio.name)}.%20¿Podrías%20contarme%20más%20detalles?`
+                          : `https://wa.me/5493416086817?text=Hola%20Cecilia,%20me%20interesa%20agendar%20un%20turno%20para%20${encodeURIComponent(
+                              servicio.name
+                            )}.%20¿Podrías%20contarme%20más%20detalles?`
                       }
                       target={
-                        servicio.name === "Maderoterapia" || servicio.name === "Masaje con Piedras Calientes"
+                        servicio.name === "Maderoterapia" ||
+                        servicio.name === "Masaje con Piedras Calientes"
                           ? undefined
                           : "_blank"
                       }
                       rel={
-                        servicio.name === "Maderoterapia" || servicio.name === "Masaje con Piedras Calientes"
+                        servicio.name === "Maderoterapia" ||
+                        servicio.name === "Masaje con Piedras Calientes"
                           ? undefined
                           : "noopener noreferrer"
                       }
                       className={`inline-flex items-center space-x-2 px-6 py-3 rounded-lg font-semibold w-full justify-center transition-colors duration-300
-                        ${servicio.name === "Maderoterapia" || servicio.name === "Masaje con Piedras Calientes"
-                          ? "bg-gray-300 text-gray-500 cursor-not-allowed opacity-70"
-                          : "bg-green-500 hover:bg-green-600 text-white"}
+                        ${
+                          servicio.name === "Maderoterapia" ||
+                          servicio.name === "Masaje con Piedras Calientes"
+                            ? "bg-gray-300 text-gray-500 cursor-not-allowed opacity-70"
+                            : "bg-green-500 hover:bg-green-600 text-white"
+                        }
                       `}
                       style={
-                        servicio.name === "Maderoterapia" || servicio.name === "Masaje con Piedras Calientes"
-                          ? { pointerEvents: 'none' }
+                        servicio.name === "Maderoterapia" ||
+                        servicio.name === "Masaje con Piedras Calientes"
+                          ? { pointerEvents: "none" }
                           : {}
                       }
                     >
                       <FaWhatsapp className="w-5 h-5" />
-                      <span>{servicio.name === "Maderoterapia" || servicio.name === "Masaje con Piedras Calientes" ? "Próximamente" : "Reservar por WhatsApp"}</span>
+                      <span>
+                        {servicio.name === "Maderoterapia" ||
+                        servicio.name === "Masaje con Piedras Calientes"
+                          ? "Próximamente"
+                          : "Reservar por WhatsApp"}
+                      </span>
                     </a>
                   </div>
                 </div>
@@ -280,16 +410,36 @@ export default function Servicios() {
         {/* Paquetes */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-800 mb-4">Paquetes Especiales</h2>
-              <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <motion.div className="text-center mb-16" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }}>
+              <motion.h2 className="text-4xl font-bold text-gray-800 mb-4 flex items-center justify-center gap-3" variants={fadeInUp}>
+                <Award className="w-8 h-8 text-primary" />
+                Paquetes Especiales
+              </motion.h2>
+              <motion.p className="text-xl text-gray-600 max-w-2xl mx-auto" variants={fadeInUp}>
                 Ahorra dinero y disfruta de múltiples sesiones con nuestros paquetes especiales
-              </p>
-            </div>
-            
-            <div className="grid md:grid-cols-3 gap-8">
+              </motion.p>
+            </motion.div>
+
+            <motion.div
+              className="grid md:grid-cols-3 gap-8"
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+            >
               {paquetes.map((paquete, index) => (
-                <div key={index} className={`relative bg-white rounded-2xl shadow-xl p-8 border-2 ${paquete.popular ? 'border-primary' : 'border-gray-200'}`}>
+                <motion.div
+                  key={index}
+                  className={`relative bg-white rounded-2xl shadow-xl p-8 border-2 ${
+                    paquete.popular ? "border-primary" : "border-gray-200"
+                  }`}
+                  variants={cardHover}
+                  whileHover="hover"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
+                >
                   {paquete.popular && (
                     <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                       <span className="bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -297,17 +447,23 @@ export default function Servicios() {
                       </span>
                     </div>
                   )}
-                  
+
                   <div className="text-center">
-                    <h3 className="text-2xl font-bold text-gray-800 mb-2">{paquete.name}</h3>
+                    <h3 className="text-2xl font-bold text-gray-800 mb-2">
+                      {paquete.name}
+                    </h3>
                     <p className="text-gray-600 mb-6">{paquete.description}</p>
-                    
+
                     <div className="mb-6">
-                      <div className="text-4xl font-bold text-primary mb-2">{paquete.price}</div>
-                      <div className="text-sm text-green-600 font-semibold">{paquete.savings}</div>
+                      <div className="text-4xl font-bold text-primary mb-2">
+                        {paquete.price}
+                      </div>
+                      <div className="text-sm text-green-600 font-semibold">
+                        {paquete.savings}
+                      </div>
                     </div>
-                    
-                    <a 
+
+                    <a
                       href={`https://wa.me/5493416086817?text=Hola%20Cecilia,%20me%20interesa%20el%20${paquete.name}.%20¿Podrías%20contarme%20más%20detalles?`}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -317,46 +473,71 @@ export default function Servicios() {
                       <span>Consultar Disponibilidad</span>
                     </a>
                   </div>
-                </div>
+                </motion.div>
               ))}
-            </div>
+            </motion.div>
           </div>
         </section>
 
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-br from-gray-900 to-gray-800 text-white">
           <div className="container mx-auto px-4 text-center">
-            <h2 className="text-4xl font-bold mb-6">¿Listo para tu sesión de bienestar?</h2>
-            <p className="text-xl mb-8 max-w-2xl mx-auto">
-              Agenda tu cita hoy mismo y comienza tu camino hacia la relajación y el bienestar
-            </p>
-            
-            <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-              <a 
-                href="https://wa.me/5493416086817?text=Hola%20Cecilia,%20me%20interesa%20agendar%20un%20turno%20para%20masajes.%20¿Podrías%20contarme%20sobre%20tus%20servicios?"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center space-x-2 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-300"
+            <motion.div
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.3 }}
+            >
+              <motion.h2
+                className="text-4xl font-bold mb-6"
+                variants={fadeInUp}
               >
-                <FaWhatsapp className="w-6 h-6" />
-                <span>Reservar por WhatsApp</span>
-              </a>
-              
-              <div className="flex items-center space-x-4 text-lg">
-                <div className="flex items-center space-x-2">
-                  <MapPin className="w-5 h-5" />
-                  <span>Rosario, Santa Fe</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <Phone className="w-5 h-5" />
-                  <span>+54 9 341 608-6817</span>
-                </div>
-              </div>
-            </div>
+                ¿Listo para tu sesión de bienestar?
+              </motion.h2>
+              <motion.p
+                className="text-xl mb-8 max-w-2xl mx-auto"
+                variants={fadeInUp}
+              >
+                Agenda tu cita hoy mismo y comienza tu camino hacia la
+                relajación y el bienestar
+              </motion.p>
+
+              <motion.div
+                className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6"
+                variants={containerVariants}
+              >
+                <motion.a
+                  href="https://wa.me/5493416086817?text=Hola%20Cecilia,%20me%20interesa%20agendar%20un%20turno%20para%20masajes.%20¿Podrías%20contarme%20sobre%20tus%20servicios?"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center space-x-2 bg-green-500 hover:bg-green-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors duration-300"
+                  variants={itemVariants}
+                  whileHover={{ scale: 1.05, y: -2 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <FaWhatsapp className="w-6 h-6" />
+                  <span>Reservar por WhatsApp</span>
+                </motion.a>
+
+                <motion.div
+                  className="flex items-center space-x-4 text-lg"
+                  variants={itemVariants}
+                >
+                  <div className="flex items-center space-x-2">
+                    <MapPin className="w-5 h-5" />
+                    <span>Rosario, Santa Fe</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <Phone className="w-5 h-5" />
+                    <span>+54 9 341 608-6817</span>
+                  </div>
+                </motion.div>
+              </motion.div>
+            </motion.div>
           </div>
         </section>
       </main>
       <Footer />
     </div>
   );
-} 
+}

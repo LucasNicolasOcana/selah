@@ -13,9 +13,8 @@ export default function Footer() {
           <div>
             <div className="mb-8 mt-10">
               <div className="flex items-center space-x-4 mb-4">
-                <h3 className="text-3xl font-bold">Selah</h3>
+                <h3 className="text-4xl font-bold great-vibes-regular">Selah</h3>
               </div>
-              <p className="text-primary-300 text-lg">Rosario, Santa Fe</p>
             </div>
             <p className="text-gray-300 mb-8 leading-relaxed text-lg">
               El descanso que tu cuerpo necesita. Soy Cecilia, masajista profesional certificada, 
