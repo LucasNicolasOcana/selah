@@ -104,20 +104,19 @@ export default function Servicios() {
     },
     {
       name: "Masaje Maternal",
-      description:
-        "Masaje especializado para futuras mamás, alivia molestias del embarazo",
+      description: "Masaje especializado para futuras mamás, alivia molestias del embarazo",
       duration: "60 min",
       price: "$16.000",
       benefits: [
         "Alivia dolores de espalda",
         "Reduce la hinchazón en piernas",
         "Mejora la circulación",
-        "Promueve la relajación",
+        "Promueve la relajación"
       ],
       icon: <Sparkles className="w-8 h-8" />,
       color: "from-orange-50 to-orange-100",
       iconColor: "text-orange-600",
-      bgColor: "bg-orange-100",
+      bgColor: "bg-orange-100"
     },
     {
       name: "Maderoterapia",
@@ -247,8 +246,9 @@ export default function Servicios() {
       <Navbar />
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-primary to-primary-light text-white py-20">
-          <div className="container mx-auto px-4 text-center mt-10">
+        <section className="bg-gradient-to-b from-[#ffde59] to-[#ff914d] text-white py-20 relative">
+          <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent"></div>
+          <div className="container mx-auto px-4 text-center mt-10 relative z-10">
             <motion.div
               className="inline-flex items-center justify-center w-20 h-20 bg-white/20 rounded-full mb-8"
               variants={scaleIn}
@@ -299,8 +299,9 @@ export default function Servicios() {
         </section>
 
         {/* Servicios Individuales */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
+        <section className="py-20 relative">
+          <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-white via-white/50 to-transparent"></div>
+          <div className="container mx-auto px-4 relative z-10">
             <motion.div className="text-center mb-16" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.3 }}>
               <motion.h2 className="text-4xl font-bold text-gray-800 mb-4 flex items-center justify-center gap-3" variants={fadeInUp}>
                 <Star className="w-8 h-8 text-primary" />

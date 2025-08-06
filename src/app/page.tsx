@@ -72,8 +72,9 @@ export default function Home() {
       <Navbar />
 
       {/* Hero Section */}
-      <section id="inicio" className="bg-gradient-to-br from-primary to-primary-light text-white py-20">
-        <div className="container-custom">
+      <section id="inicio" className="bg-gradient-to-b from-[#ffde59] to-[#ff914d] text-white py-20 relative">
+        <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent"></div>
+        <div className="container-custom relative z-10">
           <motion.div
             className="max-w-4xl mx-auto text-center relative"
             variants={containerVariants}
@@ -114,8 +115,9 @@ export default function Home() {
       </section>
 
       {/* Preguntas Frecuentes Generales */}
-      <section id="faq" className="section-padding bg-gradient-to-r from-primary-50 to-primary-100">
-        <div className="container-custom">
+      <section id="faq" className="section-padding bg-gradient-to-r from-primary-50 to-primary-100 relative">
+        <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-white via-white/50 to-transparent"></div>
+        <div className="container-custom relative z-10">
           <motion.div
             className="text-center mb-16 mt-15"
             variants={containerVariants}

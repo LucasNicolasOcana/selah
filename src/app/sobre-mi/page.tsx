@@ -15,6 +15,7 @@ import {
   CheckCircle
 } from 'lucide-react';
 import { FaWhatsapp, FaSpa, FaUserMd } from 'react-icons/fa';
+import Image from 'next/image';
 
 export default function SobreMi() {
   const certificaciones = [
@@ -166,8 +167,9 @@ export default function SobreMi() {
       <Navbar />
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="bg-gradient-to-br from-primary to-primary-light text-white py-20">
-          <div className="container mx-auto px-4">
+        <section className="bg-gradient-to-b from-[#ffde59] to-[#ff914d] text-white py-20 relative">
+          <div className="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent"></div>
+          <div className="container mx-auto px-4 relative z-10">
             <motion.div 
               className="grid lg:grid-cols-2 gap-12 items-center mt-10"
               variants={containerVariants}
@@ -240,8 +242,9 @@ export default function SobreMi() {
         </section>
 
         {/* Historia */}
-        <section className="py-20">
-          <div className="container mx-auto px-4">
+        <section className="py-20 relative">
+          <div className="absolute top-0 left-0 right-0 h-16 bg-gradient-to-b from-white via-white/50 to-transparent"></div>
+          <div className="container mx-auto px-4 relative z-10">
             <motion.div 
               className="grid lg:grid-cols-2 gap-12 items-center"
               variants={containerVariants}
@@ -545,15 +548,13 @@ export default function SobreMi() {
               whileInView="visible"
               viewport={{ once: true, amount: 0.3 }}
             >
-              <div className="flex justify-center">
-                <motion.h2 
-                  className="text-4xl font-bold text-gray-800 mb-4 flex items-center gap-3"
-                  variants={fadeInUp}
-                >
-                  <FaSpa className="w-8 h-8 text-primary" />
-                  Mi Espacio
-                </motion.h2>
-              </div>
+              <motion.h2 
+                className="text-4xl font-bold text-gray-800 mb-4 flex items-center justify-center gap-3"
+                variants={fadeInUp}
+              >
+                <FaSpa className="w-8 h-8 text-primary" />
+                Mi Espacio
+              </motion.h2>
               <motion.p 
                 className="text-xl text-gray-600 max-w-2xl mx-auto"
                 variants={fadeInUp}
@@ -563,73 +564,95 @@ export default function SobreMi() {
             </motion.div>
 
             <motion.div 
-              className="grid md:grid-cols-3 gap-6"
+              className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto"
               variants={containerVariants}
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.2 }}
             >
-              <motion.div 
-                className="bg-gradient-to-br from-spa-50 to-earth-50 rounded-2xl p-8 text-center"
-                variants={cardHover}
-                whileHover="hover"
-              >
-                <motion.div 
-                  className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
-                  variants={iconHover}
+              {[
+                { src: '/IMG_4361.jpeg', alt: 'Espacio de trabajo - Vista 1', description: 'Ambiente profesional y relajante' },
+                { src: '/IMG_4365.jpeg', alt: 'Espacio de trabajo - Vista 2', description: 'Ambiente profesional y relajante' },
+                { src: '/IMG_4363.jpeg', alt: 'Productos de calidad - Crema base de cosmos', description: 'Crema base de cosmos hidratante y nutritiva' },
+              ].map((image, index) => (
+                <motion.div
+                  key={index}
+                  className="relative group overflow-hidden rounded-2xl shadow-xl"
+                  variants={cardHover}
                   whileHover="hover"
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.1 }}
                 >
-                  <FaSpa className="w-8 h-8 text-primary" />
+                  <div className="aspect-[3/4] relative overflow-hidden">
+                    <Image
+                      src={image.src}
+                      alt={image.alt}
+                      fill
+                      className="object-cover transition-transform duration-500 group-hover:scale-110"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    />
+                    <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                    <p className="text-white text-sm font-medium">
+                      {image.description}
+                    </p>
+                  </div>
                 </motion.div>
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">
-                  Ambiente Relajante
-                </h3>
-                <p className="text-gray-600">
-                  Espacio tranquilo con música suave y aromas relajantes para
-                  crear la atmósfera perfecta
-                </p>
-              </motion.div>
+              ))}
+            </motion.div>
 
+            <motion.div 
+              className="text-center mt-12"
+              variants={containerVariants}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.2 }}
+            >
+              <motion.p 
+                className="text-lg text-gray-600 mb-6"
+                variants={fadeInUp}
+              >
+                Cada detalle está pensado para crear la experiencia perfecta
+              </motion.p>
               <motion.div 
-                className="bg-gradient-to-br from-spa-50 to-earth-50 rounded-2xl p-8 text-center"
-                variants={cardHover}
-                whileHover="hover"
+                className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto"
+                variants={containerVariants}
               >
                 <motion.div 
-                  className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
-                  variants={iconHover}
-                  whileHover="hover"
+                  className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-xl p-6 text-center"
+                  variants={itemVariants}
                 >
-                  <Heart className="w-8 h-8 text-primary" />
+                  <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <FaSpa className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="font-semibold text-gray-800 mb-2">Ambiente Relajante</h3>
+                  <p className="text-gray-600 text-sm">Música suave y aromas relajantes</p>
                 </motion.div>
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">
-                  Equipamiento Profesional
-                </h3>
-                <p className="text-gray-600">
-                  Camilla ergonómica y productos de alta calidad para garantizar
-                  tu comodidad
-                </p>
-              </motion.div>
 
-              <motion.div 
-                className="bg-gradient-to-br from-spa-50 to-earth-50 rounded-2xl p-8 text-center"
-                variants={cardHover}
-                whileHover="hover"
-              >
                 <motion.div 
-                  className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4"
-                  variants={iconHover}
-                  whileHover="hover"
+                  className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-xl p-6 text-center"
+                  variants={itemVariants}
                 >
-                  <Sparkles className="w-8 h-8 text-primary" />
+                  <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <Heart className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="font-semibold text-gray-800 mb-2">Equipamiento Profesional</h3>
+                  <p className="text-gray-600 text-sm">Camilla ergonómica y productos de calidad</p>
                 </motion.div>
-                <h3 className="text-xl font-semibold text-gray-800 mb-3">
-                  Atención Personalizada
-                </h3>
-                <p className="text-gray-600">
-                  Cada detalle está pensado para que tengas una experiencia
-                  única y memorable
-                </p>
+
+                <motion.div 
+                  className="bg-gradient-to-br from-primary/5 to-primary/10 rounded-xl p-6 text-center"
+                  variants={itemVariants}
+                >
+                  <div className="w-12 h-12 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <Sparkles className="w-6 h-6 text-primary" />
+                  </div>
+                  <h3 className="font-semibold text-gray-800 mb-2">Atención Personalizada</h3>
+                  <p className="text-gray-600 text-sm">Experiencia única y memorable</p>
+                </motion.div>
               </motion.div>
             </motion.div>
           </div>
